@@ -23,30 +23,18 @@ public class WorldGeneratorMetallum implements IWorldGenerator{
         }
     }
     private void generateNether (World world, Random random, int chunkX, int chunkZ){
-        for(int i = 0; i > 15; i++){
-            int xCoord = chunkX + random.nextInt(16);
-            int yCoord = random.nextInt(64);
-            int zCoord = chunkZ + random.nextInt(16);
 
-            new WorldGenMinable(BlockIds.VANADIUM_ORE_ID, 10).generate(world, random, xCoord, yCoord, zCoord);
-        }
     }
     private void generateSurface(World world, Random random, int chunkX, int chunkZ){
-        for(int i = 0; i > 15; i++){
+        for(int i = 0; i < 2; i++){
             int xCoord = chunkX + random.nextInt(16);
-            int yCoord = random.nextInt(64);
+            int yCoord = random.nextInt(24);
             int zCoord = chunkZ + random.nextInt(16);
 
             new WorldGenMinable(BlockIds.VANADIUM_ORE_ID, 10).generate(world, random, xCoord, yCoord, zCoord);
         }
     }
     private void generateEnd(World world, Random random, int chunkX, int chunkZ){
-        for(int i = 0; i > 15; i++){
-            int xCoord = chunkX + random.nextInt(16);
-            int yCoord = random.nextInt(64);
-            int zCoord = chunkZ + random.nextInt(16);
 
-            new WorldGenMinable(BlockIds.VANADIUM_ORE_ID, 10).generate(world, random, xCoord, yCoord, zCoord);
-        }
     }
 }
