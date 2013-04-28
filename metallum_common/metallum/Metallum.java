@@ -18,29 +18,31 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod( modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION )
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class Metallum {
-    
+
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
-    
-    public static CreativeTabs tabsMetallum = new CreativeTabMetallum(CreativeTabs.getNextID(), Reference.MOD_ID);
+
+    public static CreativeTabs tabsMetallum = new CreativeTabMetallum(
+            CreativeTabs.getNextID(), Reference.MOD_ID);
 
     @PreInit
-    public void preInit(FMLPreInitializationEvent event){
+    public void preInit(FMLPreInitializationEvent event) {
         ModItems.preInit();
         ModBlocks.preInit();
     }
-    
+
     @Init
-    public void init(FMLInitializationEvent event){
+    public void init(FMLInitializationEvent event) {
         ModItems.init();
         ModBlocks.init();
         MetallumSmelting.init();
         GameRegistry.registerWorldGenerator(new WorldGeneratorMetallum());
     }
+
     @PostInit
-    public void postInit(FMLPostInitializationEvent event){
-        
+    public void postInit(FMLPostInitializationEvent event) {
+
     }
 }
