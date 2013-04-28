@@ -1,6 +1,7 @@
 package metallum;
 
 import metallum.block.ModBlocks;
+import metallum.configuration.ConfigurationHandler;
 import metallum.core.proxy.CommonProxy;
 import metallum.creativetab.CreativeTabMetallum;
 import metallum.item.ModItems;
@@ -28,6 +29,7 @@ public class Metallum {
 
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
+        ConfigurationHandler.config(event);
         ModItems.preInit();
         ModBlocks.preInit();
     }

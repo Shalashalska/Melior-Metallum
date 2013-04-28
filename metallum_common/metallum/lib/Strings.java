@@ -25,4 +25,6 @@ public class Strings {
     public static final String VANADIUM_SHOVEL_DISPLAY_NAME = "Vanadium Shovel";
     public static final String VANADIUM_HOE_DISPLAY_NAME = "Vanadium Hoe";
     public static final String VANADIUM_ARMOR_FILE = "vanadium";
+    public static final String ITEM_ID_CONFIG_CATEGORY = "Item ID Start";
+    public static final String BLOCK_ID_CONFIG_CATEGORY = "Block ID Start";
 }

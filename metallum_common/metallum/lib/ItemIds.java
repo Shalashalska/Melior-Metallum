@@ -1,15 +1,17 @@
 package metallum.lib;
 
+import metallum.configuration.ConfigurationHandler;
+
 public class ItemIds {
 
-    public static final int VANADIUM_INGOT_ID = 9500;
-    public static final int VANADIUM_HELMET_ID = 9600;
-    public static final int VANADIUM_CHESTPLATE_ID = 9601;
-    public static final int VANADIUM_LEGGINGS_ID = 9602;
-    public static final int VANADIUM_BOOTS_ID = 9603;
-    public static final int VANADIUM_SWORD_ID = 9604;
-    public static final int VANADIUM_PICK_ID = 9605;
-    public static final int VANADIUM_SHOVEL_ID = 9606;
-    public static final int VANADIUM_AXE_ID = 9607;
-    public static final int VANADIUM_HOE_ID = 9608;
+    public static int VANADIUM_INGOT_ID = ConfigurationHandler.itemIdStart;
+    public static int VANADIUM_HELMET_ID = ConfigurationHandler.itemIdStart + 100;
+    public static int VANADIUM_CHESTPLATE_ID  = ConfigurationHandler.itemIdStart + 101;
+    public static int VANADIUM_LEGGINGS_ID  = ConfigurationHandler.itemIdStart + 102;
+    public static int VANADIUM_BOOTS_ID  = ConfigurationHandler.itemIdStart + 103;
+    public static int VANADIUM_SWORD_ID  = ConfigurationHandler.itemIdStart + 104;
+    public static int VANADIUM_PICK_ID  = ConfigurationHandler.itemIdStart + 105;
+    public static int VANADIUM_SHOVEL_ID  = ConfigurationHandler.itemIdStart + 106;
+    public static int VANADIUM_AXE_ID  = ConfigurationHandler.itemIdStart + 107;
+    public static int VANADIUM_HOE_ID  = ConfigurationHandler.itemIdStart + 108;
 }

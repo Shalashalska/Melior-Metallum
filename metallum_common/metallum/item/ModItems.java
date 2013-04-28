@@ -26,8 +26,23 @@ public class ModItems {
     public static Item vanadiumHoe;
 
     public static void preInit() {
-
+        
         setToolClass();
+        registerItems();
+
+    }
+
+    public static void init() {
+        addNames();
+    }
+    private static void setToolClass(){
+        MinecraftForge.setToolClass(vanadiumSword, "sword", TOOL_VANADIUM.getHarvestLevel());
+        MinecraftForge.setToolClass(vanadiumAxe, "axe", TOOL_VANADIUM.getHarvestLevel());
+        MinecraftForge.setToolClass(vanadiumShovel, "shovel", TOOL_VANADIUM.getHarvestLevel());
+        MinecraftForge.setToolClass(vanadiumPick, "pickaxe", TOOL_VANADIUM.getHarvestLevel());
+        MinecraftForge.setToolClass(vanadiumHoe, "hoe", TOOL_VANADIUM.getHarvestLevel());
+    }
+    private static void registerItems(){
         vanadiumIngot = new ItemMetallum(ItemIds.VANADIUM_INGOT_ID, Strings.VANADIUM_INGOT_NAME);
         vanadiumHelmet = new ItemVanadiumHelmet(ItemIds.VANADIUM_HELMET_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE));
         vanadiumChestplate = new ItemArmorMetallum(ItemIds.VANADIUM_CHESTPLATE_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE), 1, Strings.VANADIUM_CHESTPLATE_NAME);
@@ -39,8 +54,7 @@ public class ModItems {
         vanadiumAxe = new ItemAxeMetallum(ItemIds.VANADIUM_AXE_ID, TOOL_VANADIUM, Strings.VANADIUM_AXE_NAME);
         vanadiumHoe = new ItemHoeMetallum(ItemIds.VANADIUM_HOE_ID, TOOL_VANADIUM, Strings.VANADIUM_HOE_NAME);
     }
-
-    public static void init() {
+    private static void addNames(){
         LanguageRegistry.addName(vanadiumIngot,
                 Strings.VANADIUM_INGOT_DISPLAY_NAME);
         LanguageRegistry.addName(vanadiumHelmet,
@@ -61,12 +75,5 @@ public class ModItems {
                 Strings.VANADIUM_AXE_DISPLAY_NAME);
         LanguageRegistry.addName(vanadiumHoe,
                 Strings.VANADIUM_HOE_DISPLAY_NAME);
-    }
-    private static void setToolClass(){
-        MinecraftForge.setToolClass(vanadiumSword, "sword", TOOL_VANADIUM.getHarvestLevel());
-        MinecraftForge.setToolClass(vanadiumAxe, "axe", TOOL_VANADIUM.getHarvestLevel());
-        MinecraftForge.setToolClass(vanadiumShovel, "shovel", TOOL_VANADIUM.getHarvestLevel());
-        MinecraftForge.setToolClass(vanadiumPick, "pickaxe", TOOL_VANADIUM.getHarvestLevel());
-        MinecraftForge.setToolClass(vanadiumHoe, "hoe", TOOL_VANADIUM.getHarvestLevel());
     }
 }
