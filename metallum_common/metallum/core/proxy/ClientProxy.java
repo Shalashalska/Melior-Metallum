@@ -7,7 +7,7 @@ public class ClientProxy extends CommonProxy {
     public void registerRenders() {
 
     }
-
+    
     public int addArmor(String armor) {
         return RenderingRegistry.addNewArmourRendererPrefix(armor);
     }
