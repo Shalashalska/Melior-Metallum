@@ -24,8 +24,7 @@ public class Metallum {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public static CreativeTabs tabsMetallum = new CreativeTabMetallum(
-            CreativeTabs.getNextID(), Reference.MOD_ID);
+    public static CreativeTabs tabsMetallum = new CreativeTabMetallum(CreativeTabs.getNextID(), Reference.MOD_NAME);
 
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
