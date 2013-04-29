@@ -6,6 +6,8 @@ import metallum.lib.Strings;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -13,7 +15,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class ModItems {
 
     public static EnumArmorMaterial ARMOR_VANADIUM = EnumHelper.addArmorMaterial("ARMOR_VANADIUM", 20, new int[] { 3, 7, 5, 3 }, 5);
-    public static EnumToolMaterial TOOL_VANADIUM = EnumHelper.addToolMaterial("TOOL_VANADIUM", 3, 250, 12.0f, 3, 5);
+    public static EnumToolMaterial TOOL_VANADIUM = EnumHelper.addToolMaterial("TOOL_VANADIUM", 3, 500, 12.0f, 3, 5);
+    public static EnumArmorMaterial ARMOR_THORIUM = EnumHelper.addArmorMaterial("ARMOR_THORIUM", 50, new int[] { 4, 8, 6, 4}, 50);
+    public static EnumToolMaterial TOOL_THORIUM = EnumHelper.addToolMaterial("TOOL_THORIUM", 3, 100, 15.0f, 4, 50);
     public static Item vanadiumIngot;
     public static Item vanadiumHelmet;
     public static Item vanadiumChestplate;
@@ -24,6 +28,16 @@ public class ModItems {
     public static Item vanadiumAxe;
     public static Item vanadiumShovel;
     public static Item vanadiumHoe;
+    public static Item thoriumIngot;
+    public static Item thoriumSword;
+    public static Item thoriumShovel;
+    public static Item thoriumAxe;
+    public static Item thoriumHoe;
+    public static Item thoriumPick;
+    public static Item thoriumHelmet;
+    public static Item thoriumChestplate;
+    public static Item thoriumLeggings;
+    public static Item thoriumBoots;
 
     public static void preInit() {
         
@@ -41,6 +55,7 @@ public class ModItems {
         MinecraftForge.setToolClass(vanadiumShovel, "shovel", TOOL_VANADIUM.getHarvestLevel());
         MinecraftForge.setToolClass(vanadiumPick, "pickaxe", TOOL_VANADIUM.getHarvestLevel());
         MinecraftForge.setToolClass(vanadiumHoe, "hoe", TOOL_VANADIUM.getHarvestLevel());
+        MinecraftForge.setToolClass(thoriumSword, "sword", TOOL_THORIUM.getHarvestLevel());
     }
     private static void registerItems(){
         vanadiumIngot = new ItemMetallum(ItemIds.VANADIUM_INGOT_ID, Strings.VANADIUM_INGOT_NAME);
@@ -53,6 +68,16 @@ public class ModItems {
         vanadiumPick = new ItemPickaxeMetallum(ItemIds.VANADIUM_PICK_ID, TOOL_VANADIUM, Strings.VANADIUM_PICK_NAME);
         vanadiumAxe = new ItemAxeMetallum(ItemIds.VANADIUM_AXE_ID, TOOL_VANADIUM, Strings.VANADIUM_AXE_NAME);
         vanadiumHoe = new ItemHoeMetallum(ItemIds.VANADIUM_HOE_ID, TOOL_VANADIUM, Strings.VANADIUM_HOE_NAME);
+        thoriumIngot = new ItemMetallum(ItemIds.THORIUM_INGOT_ID, Strings.THORIUM_INGOT_NAME);
+        thoriumSword = new ItemPotionSword(ItemIds.THORIUM_SWORD_ID, TOOL_THORIUM, Strings.THORIUM_SWORD_NAME, new PotionEffect(Potion.poison.id, 1000, 1, true));
+        thoriumShovel = new ItemShovelMetallum(ItemIds.THORIUM_SHOVEL_ID, TOOL_THORIUM, Strings.THORIUM_SHOVEL_NAME);
+        thoriumPick = new ItemPickaxeMetallum(ItemIds.THORIUM_PICK_ID, TOOL_THORIUM, Strings.THORIUM_PICK_NAME);
+        thoriumAxe = new ItemAxeMetallum(ItemIds.THORIUM_AXE_ID, TOOL_THORIUM, Strings.THORIUM_AXE_NAME);
+        thoriumHoe = new ItemHoeMetallum(ItemIds.THORIUM_HOE_ID, TOOL_THORIUM, Strings.THORIUM_HOE_NAME);
+        thoriumHelmet = new ItemArmorMetallum(ItemIds.THORIUM_HELMET_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 0, Strings.THORIUM_HELMET_NAME);
+        thoriumChestplate = new ItemArmorMetallum(ItemIds.THORIUM_CHESTPLATE_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 1, Strings.THORIUM_CHESTPLATE_NAME);
+        thoriumLeggings = new ItemArmorMetallum(ItemIds.THORIUM_LEGGINGS_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 2, Strings.THORIUM_LEGGINGS_NAME);
+        thoriumBoots = new ItemArmorMetallum(ItemIds.THORIUM_BOOTS_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 3, Strings.THORIUM_BOOTS_NAME);
     }
     private static void addNames(){
         LanguageRegistry.addName(vanadiumIngot,
@@ -75,5 +100,25 @@ public class ModItems {
                 Strings.VANADIUM_AXE_DISPLAY_NAME);
         LanguageRegistry.addName(vanadiumHoe,
                 Strings.VANADIUM_HOE_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumSword,
+                Strings.THORIUM_INGOT_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumSword,
+                Strings.THORIUM_SWORD_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumShovel,
+                Strings.THORIUM_SHOVEL_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumAxe,
+                Strings.THORIUM_AXE_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumPick,
+                Strings.THORIUM_PICK_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumHoe,
+                Strings.THORIUM_HOE_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumHelmet,
+                Strings.THORIUM_HELMET_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumChestplate,
+                Strings.THORIUM_CHESTPLATE_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumLeggings,
+                Strings.THORIUM_LEGGINGS_DISPLAY_NAME);
+        LanguageRegistry.addName(thoriumBoots,
+                Strings.THORIUM_BOOTS_DISPLAY_NAME);
     }
 }

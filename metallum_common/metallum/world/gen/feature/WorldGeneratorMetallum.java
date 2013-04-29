@@ -32,6 +32,7 @@ public class WorldGeneratorMetallum implements IWorldGenerator{
             int zCoord = chunkZ + random.nextInt(16);
 
             new WorldGenMinable(BlockIds.VANADIUM_ORE_ID, 10).generate(world, random, xCoord, yCoord, zCoord);
+            new WorldGenMinable(BlockIds.THORIUM_ORE_ID, 5).generate(world, random, xCoord, yCoord, zCoord);
         }
     }
     private void generateEnd(World world, Random random, int chunkX, int chunkZ){
