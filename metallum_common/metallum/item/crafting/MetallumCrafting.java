@@ -21,5 +21,13 @@ public class MetallumCrafting {
         GameRegistry.addRecipe(new ItemStack(ModItems.vanadiumLeggings), "vvv", "v v", "v v", 'v', vanadiumIngotStack);
         GameRegistry.addRecipe(new ItemStack(ModItems.vanadiumBoots), "v v", "v v", 'v', vanadiumIngotStack);
         GameRegistry.addRecipe(new ItemStack(ModItems.thoriumSword), "t", "t", "s", 't', thoriumIngotStack, 's', stickStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumPick), "ttt", " s ", " s ", 't', thoriumIngotStack, 's', stickStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumAxe), "tt", "st", "s ", 't', thoriumIngotStack, 's', stickStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumHoe), "tt", "s ", "s ", 't', thoriumIngotStack, 's', stickStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumShovel), "t", "s", "s", 't', thoriumIngotStack, 's', stickStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumHelmet), "ttt", "t t", 't', thoriumIngotStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumChestplate), "t t", "ttt", "ttt", 't', thoriumIngotStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumLeggings), "ttt", "t t", "t t", 't', thoriumIngotStack);
+        GameRegistry.addRecipe(new ItemStack(ModItems.thoriumBoots), "t t", "t t", 't', thoriumIngotStack);
     }
 }
