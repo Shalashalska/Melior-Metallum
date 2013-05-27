@@ -100,7 +100,7 @@ public class ModItems {
                 Strings.VANADIUM_AXE_DISPLAY_NAME);
         LanguageRegistry.addName(vanadiumHoe,
                 Strings.VANADIUM_HOE_DISPLAY_NAME);
-        LanguageRegistry.addName(thoriumSword,
+        LanguageRegistry.addName(thoriumIngot,
                 Strings.THORIUM_INGOT_DISPLAY_NAME);
         LanguageRegistry.addName(thoriumSword,
                 Strings.THORIUM_SWORD_DISPLAY_NAME);

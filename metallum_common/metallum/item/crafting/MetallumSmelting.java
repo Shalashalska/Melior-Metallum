@@ -9,5 +9,6 @@ public class MetallumSmelting {
 
     public static void init(){
         GameRegistry.addSmelting(BlockIds.VANADIUM_ORE_ID, new ItemStack(ModItems.vanadiumIngot), 50.0f);
+        GameRegistry.addSmelting(BlockIds.THORIUM_ORE_ID, new ItemStack(ModItems.thoriumIngot), 100.0f);
     }
 }
