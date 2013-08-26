@@ -23,10 +23,10 @@ public class ModBlocks {
         addNames();
     }
     private static void registerBlocks(){
-        vanadiumOre = new BlockMetallum(BlockIds.VANADIUM_ORE_ID, Material.rock, Strings.VANADIUM_ORE_NAME, 2.0f, 20.0f);
-        vanadiumBlock = new BlockMetallum(BlockIds.VANADIUM_BLOCK_ID, Material.rock, Strings.VANADIUM_BLOCK_NAME, 4.0f, 40.0f);
-        thoriumOre = new BlockMetallum(BlockIds.THORIUM_ORE_ID, Material.rock, Strings.THORIUM_ORE_NAME, 2.5f, 25.0f);
-        thoriumBlock = new BlockMetallum(BlockIds.THORIUM_BLOCK_ID, Material.rock, Strings.THORIUM_BLOCK_NAME, 5.0f, 50.0f);
+        vanadiumOre = new BlockMetallum(BlockIds.VANADIUM_ORE_ID, Material.rock, Strings.VANADIUM_ORE_NAME, 2.0f, 20.0f, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_ORE_NAME);
+        vanadiumBlock = new BlockMetallum(BlockIds.VANADIUM_BLOCK_ID, Material.rock, Strings.VANADIUM_BLOCK_NAME, 4.0f, 40.0f, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_BLOCK_NAME);
+        thoriumOre = new BlockMetallum(BlockIds.THORIUM_ORE_ID, Material.rock, Strings.THORIUM_ORE_NAME, 2.5f, 25.0f, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_ORE_NAME);
+        thoriumBlock = new BlockMetallum(BlockIds.THORIUM_BLOCK_ID, Material.rock, Strings.THORIUM_BLOCK_NAME, 5.0f, 50.0f, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_BLOCK_NAME);
         
         GameRegistry.registerBlock(vanadiumOre, Strings.VANADIUM_ORE_NAME);
         GameRegistry.registerBlock(vanadiumBlock, Strings.VANADIUM_BLOCK_NAME);

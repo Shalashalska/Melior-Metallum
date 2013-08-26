@@ -54,4 +54,5 @@ public class Strings {
     public static final String THORIUM_CHESTPLATE_DISPLAY_NAME = "Thorium Chestplate";
     public static final String THORIUM_LEGGINGS_DISPLAY_NAME = "Thorium Leggings";
     public static final String THORIUM_BOOTS_DISPLAY_NAME = "Thorium Boots";
+    public static final String TEXTURE_FOLDER = "metallum";
 }

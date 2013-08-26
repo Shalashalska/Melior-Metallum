@@ -5,14 +5,13 @@ import metallum.configuration.ConfigurationHandler;
 import metallum.core.proxy.CommonProxy;
 import metallum.creativetab.CreativeTabMetallum;
 import metallum.item.ModItems;
+import metallum.item.crafting.MetallumCrafting;
 import metallum.item.crafting.MetallumSmelting;
 import metallum.lib.Reference;
 import metallum.world.gen.feature.WorldGeneratorMetallum;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -27,22 +26,23 @@ public class Metallum {
 
     public static CreativeTabs tabsMetallum = new CreativeTabMetallum(CreativeTabs.getNextID(), Reference.MOD_NAME);
 
-    @PreInit
+    @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.config(event);
         ModItems.preInit();
         ModBlocks.preInit();
     }
 
-    @Init
+    @EventHandler
     public void init(FMLInitializationEvent event) {
         ModItems.init();
         ModBlocks.init();
         MetallumSmelting.init();
+        MetallumCrafting.init();
         GameRegistry.registerWorldGenerator(new WorldGeneratorMetallum());
     }
 
-    @PostInit
+    @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
     }

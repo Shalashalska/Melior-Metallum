@@ -6,9 +6,10 @@ import net.minecraft.item.ItemPickaxe;
 
 public class ItemPickaxeMetallum extends ItemPickaxe{
 
-    public ItemPickaxeMetallum(int id, EnumToolMaterial toolMaterial, String itemName) {
+    public ItemPickaxeMetallum(int id, EnumToolMaterial toolMaterial, String itemName, String textureLocation) {
         super(id, toolMaterial);
         this.setUnlocalizedName(itemName);
         this.setCreativeTab(Metallum.tabsMetallum);
+        func_111206_d(textureLocation);
     }
 }

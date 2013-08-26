@@ -14,8 +14,8 @@ public class ConfigurationHandler {
                 event.getSuggestedConfigurationFile());
         config.load();
         
-        itemIdStart = config.get(Strings.ITEM_ID_CONFIG_CATEGORY, "CATEGORY_ITEM", 9500).getInt();
-        blockIdStart = config.get(Strings.BLOCK_ID_CONFIG_CATEGORY, "CATEGORY_ITEM", 2900).getInt();
+        itemIdStart = config.get(Strings.ITEM_ID_CONFIG_CATEGORY, "CATEGORY_ITEM", 9950).getInt();
+        blockIdStart = config.get(Strings.BLOCK_ID_CONFIG_CATEGORY, "CATEGORY_ITEM", 2850).getInt();
         
         config.save();
     }

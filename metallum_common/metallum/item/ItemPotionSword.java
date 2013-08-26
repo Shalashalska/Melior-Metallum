@@ -12,8 +12,8 @@ public class ItemPotionSword extends ItemSwordMetallum {
     private PotionEffect potionEffect;
 
     public ItemPotionSword(int id, EnumToolMaterial toolMaterial,
-            String itemName, PotionEffect potionEffect) {
-        super(id, toolMaterial, itemName);
+            String itemName, PotionEffect potionEffect, String textureLocation) {
+        super(id, toolMaterial, itemName, textureLocation);
         this.potionEffect = potionEffect;
     }
 
