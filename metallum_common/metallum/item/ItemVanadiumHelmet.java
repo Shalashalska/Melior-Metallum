@@ -12,8 +12,8 @@ import net.minecraft.world.World;
 public class ItemVanadiumHelmet extends ItemArmorMetallum {
 
     public ItemVanadiumHelmet(int par1,
-            EnumArmorMaterial par2EnumArmorMaterial, int par3, String textureLocation) {
-        super(par1, par2EnumArmorMaterial, par3, 0, Strings.VANADIUM_HELMET_NAME, textureLocation);
+            EnumArmorMaterial par2EnumArmorMaterial, String textureLocation, String material) {
+        super(par1, par2EnumArmorMaterial, 0, Strings.VANADIUM_HELMET_NAME, textureLocation, material);
     }
 
     @Override

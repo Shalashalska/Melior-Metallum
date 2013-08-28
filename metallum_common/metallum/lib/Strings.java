@@ -55,4 +55,5 @@ public class Strings {
     public static final String THORIUM_LEGGINGS_DISPLAY_NAME = "Thorium Leggings";
     public static final String THORIUM_BOOTS_DISPLAY_NAME = "Thorium Boots";
     public static final String TEXTURE_FOLDER = "metallum";
+    public static final String ARMOR_LOCATION = "metallum:textures/armor/";
 }

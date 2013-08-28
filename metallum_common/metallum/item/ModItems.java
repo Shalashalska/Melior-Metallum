@@ -1,6 +1,5 @@
 package metallum.item;
 
-import metallum.Metallum;
 import metallum.lib.ItemIds;
 import metallum.lib.Strings;
 import net.minecraft.item.EnumArmorMaterial;
@@ -59,25 +58,25 @@ public class ModItems {
     }
     private static void registerItems(){
         vanadiumIngot = new ItemMetallum(ItemIds.VANADIUM_INGOT_ID, Strings.VANADIUM_INGOT_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_INGOT_NAME);
-        vanadiumHelmet = new ItemVanadiumHelmet(ItemIds.VANADIUM_HELMET_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE), Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_HELMET_NAME);
-        vanadiumChestplate = new ItemArmorMetallum(ItemIds.VANADIUM_CHESTPLATE_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE), 1, Strings.VANADIUM_CHESTPLATE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_CHESTPLATE_NAME);
-        vanadiumLeggings = new ItemArmorMetallum(ItemIds.VANADIUM_LEGGINGS_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE), 2, Strings.VANADIUM_LEGGINGS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_LEGGINGS_NAME);
-        vanadiumBoots = new ItemArmorMetallum(ItemIds.VANADIUM_BOOTS_ID, ARMOR_VANADIUM, Metallum.proxy.addArmor(Strings.VANADIUM_ARMOR_FILE), 3, Strings.VANADIUM_BOOTS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_BOOTS_NAME);
+        vanadiumHelmet = new ItemVanadiumHelmet(ItemIds.VANADIUM_HELMET_ID, ARMOR_VANADIUM, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_HELMET_NAME, "vanadium1.png");
+        vanadiumChestplate = new ItemArmorMetallum(ItemIds.VANADIUM_CHESTPLATE_ID, ARMOR_VANADIUM, 1, Strings.VANADIUM_CHESTPLATE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_CHESTPLATE_NAME, "vanadium1.png");
+        vanadiumLeggings = new ItemArmorMetallum(ItemIds.VANADIUM_LEGGINGS_ID, ARMOR_VANADIUM, 2, Strings.VANADIUM_LEGGINGS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_LEGGINGS_NAME, "vanadium2.png");
+        vanadiumBoots = new ItemArmorMetallum(ItemIds.VANADIUM_BOOTS_ID, ARMOR_VANADIUM, 3, Strings.VANADIUM_BOOTS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_BOOTS_NAME, "vanadium1.png");
         vanadiumSword = new ItemSwordMetallum(ItemIds.VANADIUM_SWORD_ID, TOOL_VANADIUM, Strings.VANADIUM_SWORD_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_SWORD_NAME);
         vanadiumShovel = new ItemShovelMetallum(ItemIds.VANADIUM_SHOVEL_ID, TOOL_VANADIUM, Strings.VANADIUM_SHOVEL_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_SHOVEL_NAME);
         vanadiumPick = new ItemPickaxeMetallum(ItemIds.VANADIUM_PICK_ID, TOOL_VANADIUM, Strings.VANADIUM_PICK_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_PICK_NAME);
         vanadiumAxe = new ItemAxeMetallum(ItemIds.VANADIUM_AXE_ID, TOOL_VANADIUM, Strings.VANADIUM_AXE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_AXE_NAME);
         vanadiumHoe = new ItemHoeMetallum(ItemIds.VANADIUM_HOE_ID, TOOL_VANADIUM, Strings.VANADIUM_HOE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.VANADIUM_HOE_NAME);
         thoriumIngot = new ItemMetallum(ItemIds.THORIUM_INGOT_ID, Strings.THORIUM_INGOT_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_INGOT_NAME);
-        thoriumSword = new ItemPotionSword(ItemIds.THORIUM_SWORD_ID, TOOL_THORIUM, Strings.THORIUM_SWORD_NAME, new PotionEffect(Potion.poison.id, 1000, 1, true), Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_SWORD_NAME);
+        thoriumSword = new ItemPotionSword(ItemIds.THORIUM_SWORD_ID, TOOL_THORIUM, Strings.THORIUM_SWORD_NAME, new PotionEffect(Potion.wither.id, 1000, 1, true), Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_SWORD_NAME);
         thoriumShovel = new ItemShovelMetallum(ItemIds.THORIUM_SHOVEL_ID, TOOL_THORIUM, Strings.THORIUM_SHOVEL_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_SHOVEL_NAME);
         thoriumPick = new ItemPickaxeMetallum(ItemIds.THORIUM_PICK_ID, TOOL_THORIUM, Strings.THORIUM_PICK_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_PICK_NAME);
         thoriumAxe = new ItemAxeMetallum(ItemIds.THORIUM_AXE_ID, TOOL_THORIUM, Strings.THORIUM_AXE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_AXE_NAME);
         thoriumHoe = new ItemHoeMetallum(ItemIds.THORIUM_HOE_ID, TOOL_THORIUM, Strings.THORIUM_HOE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_HOE_NAME);
-        thoriumHelmet = new ItemArmorMetallum(ItemIds.THORIUM_HELMET_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 0, Strings.THORIUM_HELMET_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_HELMET_NAME);
-        thoriumChestplate = new ItemArmorMetallum(ItemIds.THORIUM_CHESTPLATE_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 1, Strings.THORIUM_CHESTPLATE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_CHESTPLATE_NAME);
-        thoriumLeggings = new ItemArmorMetallum(ItemIds.THORIUM_LEGGINGS_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 2, Strings.THORIUM_LEGGINGS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_LEGGINGS_NAME);
-        thoriumBoots = new ItemArmorMetallum(ItemIds.THORIUM_BOOTS_ID, ARMOR_THORIUM, Metallum.proxy.addArmor(Strings.THORIUM_ARMOR_FILE), 3, Strings.THORIUM_BOOTS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_BOOTS_NAME);
+        thoriumHelmet = new ItemArmorMetallum(ItemIds.THORIUM_HELMET_ID, ARMOR_THORIUM, 0, Strings.THORIUM_HELMET_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_HELMET_NAME, "thorium1.png");
+        thoriumChestplate = new ItemArmorMetallum(ItemIds.THORIUM_CHESTPLATE_ID, ARMOR_THORIUM,1, Strings.THORIUM_CHESTPLATE_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_CHESTPLATE_NAME, "thorium1.png");
+        thoriumLeggings = new ItemArmorMetallum(ItemIds.THORIUM_LEGGINGS_ID, ARMOR_THORIUM, 2, Strings.THORIUM_LEGGINGS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_LEGGINGS_NAME, "thorium2.png");
+        thoriumBoots = new ItemArmorMetallum(ItemIds.THORIUM_BOOTS_ID, ARMOR_THORIUM, 3, Strings.THORIUM_BOOTS_NAME, Strings.TEXTURE_FOLDER + ":" + Strings.THORIUM_BOOTS_NAME, "thorium1.png");
     }
     private static void addNames(){
         LanguageRegistry.addName(vanadiumIngot,
